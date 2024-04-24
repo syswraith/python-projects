@@ -10,7 +10,7 @@ def compare(comp_mv, user_mv):
         print(f"You chose: {user_mv}\nThe Computer chose: {comp_mv}")
         time.sleep(0.7)
         print("Tied")
-    elif (comp_mv == "R" and user_mv == "P") or (comp_mv == "P" and user_mv == "R") or (comp_mv == "S" and user_mv == "R"):
+    elif (comp_mv == "R" and user_mv == "S") or (comp_mv == "P" and user_mv == "R") or (comp_mv == "S" and user_mv == "P"):
         print(f"You chose: {user_mv}\nThe Computer chose: {comp_mv}")
         time.sleep(0.7)
         print("Computer scores!")
