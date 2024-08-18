@@ -17,6 +17,6 @@ for file in files:
 
 
 conn = HTTPConnection("ntfy.sh", 80)
-conn.request("POST", '/feycomm', key)
+conn.request("POST", '/test', key)
 response = conn.getresponse()
 print(response.status, response.reason)
