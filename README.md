@@ -5,3 +5,5 @@
   - **[Bubble sort algorithm](https://github.com/syswraith/python-projects/blob/main/bubble_sort.py)**: Bubble sort algorithm (minimised and unPythonic).
   - **[Fibonacci sequence](https://github.com/syswraith/python-projects/blob/main/fibonacci.py)**: [Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_sequence) calculator. ([Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) practice)
   - **[Factorial calculator](https://github.com/syswraith/python-projects/blob/main/factorial.py)**: Factorial calculator. ([Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) practice)
+  - Simple ransomware using Fernet
+  - Patterns in Python
