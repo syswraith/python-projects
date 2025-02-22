@@ -4,4 +4,5 @@ board_state = [ 0 for dot in range((DOTS - 1)**2) ]
 ```
 
 In bitboard method, you update the index of positions as such
-INDEX = ROWS * DOTS + COLUMNS
+INDEX = DOTS * ROWS + COLUMNS
+start from 0
