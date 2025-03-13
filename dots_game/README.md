@@ -1,1 +1,0 @@
-Implementing a Dots and Lines game in pure ASCII. A different approach from @Tervicke's. He was using Level 1337 Mage DSA magic. I'm trying out a modified version of the Bitboard method :") Managed to get the renderer and the moves working. Here's a quick demo: https://asciinema.org/a/uIEDCbd0Dxrn4sQHlcmNmhsl5
