@@ -23,18 +23,18 @@ coords = generate_coordinates(num_blocks)
 def Move():
     global player_turn  # Needed to modify player_turn
     square_made = 0  # Initialize square_made
-    move = input('> ')
+    move = input(' > ')
     x, y = map(int, move.split(','))
     try:
         if board_state[x][y] == 1:
-            print("> Move already made. Try again.")
+            print(" > Move already made. Try again.")
             return Move()
         else:
             board_state[x][y] = 1
             if if_square(x, y):
                 square_made = 1
     except IndexError:
-        print("> Invalid move. Try again.")
+        print(" > Invalid move. Try again.")
         return Move()
     
     if square_made == 0:
@@ -57,8 +57,6 @@ def if_square(x, y):
     return False
 
 def Render():
-    print('  0   1   2 ')
-
     for x in range(len(board_state)):
         if len(board_state[x]) == 3:
             print('+', end='')
@@ -89,7 +87,7 @@ def Render():
 while end_game:
     Render()
     if len(squares_owned['A'])+len(squares_owned['B'])==9: end_game = False
-    print('A' if player_turn == 0 else 'B')
+    print('A' if player_turn == 0 else 'B', end='')
     Move()
     print()
 
