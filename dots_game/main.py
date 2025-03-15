@@ -21,8 +21,8 @@ def generate_coordinates(num_blocks):
 coords = generate_coordinates(num_blocks)
 
 def Move():
-    global player_turn  # Needed to modify player_turn
-    square_made = 0  # Initialize square_made
+    global player_turn
+    square_made = 0 
     move = input(' > ')
     x, y = map(int, move.split(','))
     try:
@@ -38,17 +38,17 @@ def Move():
         return Move()
     
     if square_made == 0:
-        player_turn = 1 - player_turn  # Switch turns if no square was made
+        player_turn = 1 - player_turn
     
 def if_square(x, y):
     global player_turn
     player = 'A' if player_turn == 0 else 'B'
-    squares_completed = 0  # Track how many squares were completed
+    squares_completed = 0
 
     for square_coords in coords:
         if (x, y) in square_coords:
             if all(board_state[a][b] == 1 for (a, b) in square_coords):
-                if square_coords not in squares_owned[player]:  # Avoid duplicates
+                if square_coords not in squares_owned[player]:
                     squares_owned[player].append(square_coords)
                     squares_completed += 1
 
@@ -64,25 +64,18 @@ def Render():
                 print('---+' if line else '   +', end='')
         else:
             for line in range(len(board_state[x])):
-                square_owner = ' '  # Default empty space
+                square_owner = ' '
 
-                # Check if (x, line) is part of a completed square
                 for owner, squares in squares_owned.items():
                     if any(square[1] == (x, line) for square in squares):
                         square_owner = owner
-                        break  # Stop searching after finding the owner
+                        break
 
-                # Print '|' if the point exists in board_state, followed by owner if applicable
                 if board_state[x][line] == 1:
                     print(f"| {square_owner} ", end='')
                 else:
                     print("    ", end='')
         print()
-            # check if the point exists as 1 on board_state
-            # check if the point exists inside squares_owned
-            # if it does record square_owner as the key
-            # print the '|' and follow it with spaces if only the point exists as 1
-            # print the '|' and follow it with square_owner if both are true
 
 while end_game:
     Render()
