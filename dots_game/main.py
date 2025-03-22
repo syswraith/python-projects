@@ -79,7 +79,10 @@ def Render():
 
 while end_game:
     Render()
-    if len(squares_owned['A'])+len(squares_owned['B'])==9: end_game = False
+    if all(all(cell == 1 for cell in row) for row in board_state):
+        winner = max(squares_owned, key=lambda k: len(squares_owned[k]))
+        print(f"{winner} wins")
+        break
     print('A' if player_turn == 0 else 'B', end='')
     Move()
     print()
