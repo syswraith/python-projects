@@ -1,3 +1,5 @@
+#from rich.pretty import pprint
+
 number_of_days = 31
 graph = {}
 
@@ -8,6 +10,7 @@ for day in range(1, number_of_days):
         distance = adjacent_days - day
         graph.setdefault(f"Day {day}", []).append((f"Day {adjacent_days}", distance))
 
+#pprint(graph)
 
 def greedy_path(at_day, goto_day):
     '''
