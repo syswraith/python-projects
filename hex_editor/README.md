@@ -1,3 +1,7 @@
+```bash
+python3 pssd.py -o 16 --filename example.txt > hexdump
+```
+
 ```
 00000000  4c 6f 72 65 6d 20 69 70 73 75 6d 20 64 6f 6c 6f   Lorem ipsum dolo
 00000010  72 20 73 69 74 20 61 6d 65 74 2c 20 63 6f 6e 73   r sit amet, cons
