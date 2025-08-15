@@ -1,4 +1,5 @@
 ```bash
+python3 pssd.py -h
 python3 pssd.py -o 16 --filename example.txt > hexdump
 ```
 
